@@ -1,0 +1,22 @@
+<!-- <ion-list class="ion-no-margin ion-no-padding">
+  <div class="column-list" cdkDropList (cdkDropListDropped)="drop($event)">
+    <div *ngFor="let column of columnList; let i=index" class="column-item"
+      [class.disabled-drag]="column.pinned" cdkDrag [cdkDragDisabled]="column.pinned">
+      <ng-template [ngIf]="column.colDef.showInList">
+        <span class="chk" (click)="onCustomClick(column, i)" [class.visible-item]="column.visible"></span>
+        <label>{{ column.colDef.headerName }}</label>
+      </ng-template>
+    </div>
+  </div>
+</ion-list> -->
+
+<ion-list class="ion-no-margin ion-no-padding">
+  <div class="column-list" cdkDropList (cdkDropListDropped)="drop($event)">
+    <div *ngFor="let column of columnsToDisplay; let i=index">
+      <div class="column-item" *ngIf="column.allow" [class.disabled-drag]="column.pinned" [cdkDragData]="column" cdkDrag [cdkDragDisabled]="column.pinned">
+        <span class="chk" (click)="onCustomClick(column, i)" [class.visible-item]="column.visible"></span>
+        <label>{{ column.name }}</label>
+      </div>
+    </div>
+  </div>
+</ion-list>

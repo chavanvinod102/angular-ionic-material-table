@@ -1,0 +1,8 @@
+<ion-list class="ion-no-margin ion-no-padding">
+  <ul class="column-list" *ngFor="let column of columnList">
+    <li class="column-item">
+        <input type="checkbox" [checked]="column.visible" (change)="toggleColumn($event, column.colId)">
+        <label>{{ column.colDef.headerName }}</label>
+    </li>
+  </ul>
+</ion-list>

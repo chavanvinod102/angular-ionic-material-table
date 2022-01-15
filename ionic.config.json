@@ -1,0 +1,7 @@
+{
+  "name": "spa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

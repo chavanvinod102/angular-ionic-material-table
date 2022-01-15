@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+     Angular Basic table
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="grid-parent">
+      <ag-grid-angular 
+      class="ag-theme-alpine"
+      style="width: 100%; height: 100%;"
+      [rowData]="rowData" 
+      [columnDefs]="columnDefs"
+      [showToolPanel]="showToolPanel"
+      [pagination]="true"
+      rowSelection='multiple'
+      (cellClicked)="onCellClicked($event)"
+      (sortChanged)="onSortChange($event)"
+      [frameworkComponents]="frameworkComponents"
+      [suppressRowClickSelection]="true" 
+      paginationPageSize="15">
+    </ag-grid-angular>
+  </div>
+  <!-- <app-angular-basic-table></app-angular-basic-table> -->
+
+</ion-content>

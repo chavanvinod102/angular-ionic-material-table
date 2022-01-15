@@ -1,0 +1,15 @@
+.column-list {
+  list-style: none;
+  margin: 10px 0px;
+  padding-left: 18px;
+  .column-item {
+    padding: 4px;
+    input {
+      margin-right: 4px;;
+    }
+  }
+}
+.grid-pivot-popover.popover-wrapper>.popover-content {
+  height: 100px !important;
+  overflow-x: scroll;
+}

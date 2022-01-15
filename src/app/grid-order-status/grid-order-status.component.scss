@@ -1,0 +1,18 @@
+.grid-order-status {
+  width: 100px;
+  height: 25px;
+  margin-top: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.completed {
+  border: 1px solid #FF6347;
+  border-radius: 3px;
+  color: #FF6347;
+}
+.pending  {
+  border: 1px solid #FFFF99;
+  border-radius: 3px;
+  color: #FFFF99;
+}

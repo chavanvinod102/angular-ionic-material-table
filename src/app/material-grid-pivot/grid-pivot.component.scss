@@ -1,0 +1,30 @@
+.column-list {
+  list-style: none;
+  margin: 10px 0px;
+  padding-left: 18px;
+  .column-item {
+    padding: 4px;
+    cursor: pointer;
+    label {
+      cursor: pointer;
+    }
+    &.disabled-drag {
+      opacity: 0.6;
+      cursor: default;
+      label {
+        cursor: default;
+      }
+    }
+  }
+}
+
+.chk {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #ccc;
+  margin-right: 7px;
+  &.visible-item {
+    background-color: #358ed7;
+  }
+}

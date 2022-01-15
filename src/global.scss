@@ -1,0 +1,215 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+/* Grid css */
+
+@import "ag-grid-community/dist/styles/ag-grid.css";
+@import "ag-grid-community/dist/styles/ag-theme-alpine.css";
+
+@font-face {
+	font-family: 'Lato';
+	font-weight: 400;
+	src: url('assets/Lato/Lato-Regular.ttf');
+}
+
+// body, body * {
+//   font-family: 'Lato'
+// }
+.ag-theme-alpine .ag-header-cell{
+  background-color: white;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 700;
+  color: #34495e;
+}
+
+.ag-theme-alpine .ag-cell {
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: normal;
+  color: #333333;
+}
+
+.grid-order-status {
+  width: 100px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+.completed {
+  border: 1px solid #ff4d4d;
+  border-radius: 3px;
+  color: #ff4d4d;
+}
+.pending  {
+  border: 1px solid #9b51e0;
+  border-radius: 3px;
+  color: #9b51e0;
+}
+.in-progress  {
+  border: 1px solid #2ed47a;
+  border-radius: 3px;
+  color: #2ed47a;
+}
+.pick-in-progress {
+  border: 1px solid #ffb946;
+  border-radius: 3px;
+  color: #ffb946;
+}
+.grid-more-options-popover .popover-wrapper>.popover-content {
+  width: 125px !important;
+  height: 65px !important;
+}
+.ag-header-cell.grid-order-column {
+  padding-left: 0px;
+  .ag-header-select-all {
+    margin-right: 12px;
+  }
+}
+// / width /
+::-webkit-scrollbar {
+width: 6px;
+height: 6px;
+}
+
+// / Track /
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+// / Handle /
+::-webkit-scrollbar-thumb {
+background: #888;
+border-radius: 3px;
+}
+
+// / Handle on hover /
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+
+.ag-theme-alpine .ag-cell.ag-cell-last-left-pinned:not(.ag-cell-range-right):not(.ag-cell-range-single-cell) {
+  border-right: transparent;
+}
+.ag-theme-alpine .ag-pinned-left-header {
+  border-right: transparent;
+}
+.ag-theme-alpine .ag-cell.ag-cell-first-right-pinned:not(.ag-cell-range-left):not(.ag-cell-range-single-cell) {
+  border-left: transparent
+}
+.ag-theme-alpine .ag-pinned-right-header {
+  border-left: transparent
+}
+
+// .button-pop-up {
+//   background-color: white;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-around;
+//   align-items: center;
+//   width: 150px;
+//   margin:0;
+// }
+
+// .popup-button {
+//   color: lightblue;
+//   background-color: white !important;
+//   font-size: 20px;
+//   padding: 10px;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+
+
+// angular material
+
+// .width-50 {
+//   width: 50px !important;
+//   min-width: 50px !important;
+// } 
+.cdk-column-select {
+  min-width: 60px !important;
+  width: 60px !important;
+  }
+  
+  
+  .cdk-column-expandicon.mat-column-expandicon {
+  min-width: 60px !important;
+  width: 60px !important;
+  }
+  
+  .cdk-column-name.mat-column-name {
+  min-width: 160px !important;
+  width: 160px !important;
+  }
+  
+  .cdk-column-status.mat-column-status {
+  min-width: 160px !important;
+  width: 160px !important;
+  }
+  
+  th.cdk-column-status {
+  > div {
+  justify-content: center;
+  }
+  }
+  
+  .mat-header-cell.cdk-header-cell {
+  > div {
+  justify-content: center;
+  }
+  }
+  
+  .cdk-column-pivot.mat-column-pivot {
+  min-width: 60px !important;
+  width: 60px !important;
+  }
+  
+  td.mat-cell {
+  // min-width: 120px;
+  }
+  
+  .example-element-row td {
+  border-bottom-width: 0;
+  min-width: 120px;
+  }
+  
+  .example-element-row td, .mat-header-row th {
+  text-align: center;
+  }
+  
+ .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: #358ED7;
+  }
+  .mat-checkbox-checked:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element, .mat-checkbox:active:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element {
+    background: #358ED7;
+}
+  
